@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Validacion de usuarios</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+    
+</head>
+ 
+<body>
+    
+    <!------------    LOGIN    !------------>
+	<div data-role="page" id="inicio">
+	    
+            <div id="fondo-login">
+
+            <!--- HEADER !-->
+            <div data-role="header" class="none">
+            <img id="logo" src="img/logo.png">
+            </div>
+
+
+            <!--- CONTENIDO !-->
+            <div data-role="content">	
+            <form id="formulario" >
+            <input type="text" id="nombredeusuario" name="nombredeusuario">
+            <input type="password" id="clave" name="clave">
+            <input type="submit" value="Login">
+            <input type="button" value="Registrarse">
+            </form>	
+            </div>
+            </div>
+        
+	</div>
+
+    
+    <!------------    POPULAR    !------------>
+	<div data-role="page" id="home" class="page">
+	           
+        
+            <!--- HEADER !-->
+            <div data-role="header" class="none topbar">
+            <h1 id="titulo">Popular</h1>
+            </div>
+		 
+        
+            <!--- MENU DE GENEROS !-->
+            <div class="menu-generos">    
+            <a class="hexagon-genre" onClick="openMenuGeneros()"></a>
+            <div class="btns-genres">
+            <div class="gen1">123</div>
+            <div class="gen2">123</div>
+            <div class="gen3">123</div>
+            <div class="gen4">123</div>
+            </div>   
+            </div>
+            
+            <!--- MENU NAVEGACION !-->
+            <div class="menu-nav">
+            <div class="btn-menu-nav">
+            <a href="#home" data-transition="slideup"><div class="img-btn btn-popular-a"></div></a>
+            </div>
+            <div class="btn-menu-nav">
+            <a href="#favorito" data-transition="slideup"><div class="img-btn btn-favorite-o"></div></a>
+            </div>
+            <a href="#notificacion" data-transition="slideup"><div class="btn-menu-nav">
+            <div class="img-btn btn-notification-o"></div></a>
+            </div>
+            </div>
+        
+        
+            <!--- CONTENIDO !-->
+		    <div data-role="content" class="secciones">	
+		    <ul id="articulos-populares"></ul>
+		    </div>
+ 
+	</div>
+
+    <!------------    FAVORITOS    !------------>
+	<div data-role="page" id="favorito" class="page">
+	           
+        
+            <!--- HEADER !-->
+            <div data-role="header" class="none topbar">
+            <h1 id="titulo">Favoritos</h1>
+            </div>
+		 
+            <!--- MENU NAVEGACION !-->
+            <div class="menu-nav">
+            <div class="btn-menu-nav">
+            <a href="#home" data-transition="slideup"><div class="img-btn btn-popular-o"></div></a>
+            </div>
+            <div class="btn-menu-nav">
+            <a href="#favorito" data-transition="slideup"><div class="img-btn btn-favorite-a"></div></a>
+            </div>
+            <a href="#notificacion" data-transition="slideup"><div class="btn-menu-nav">
+            <div class="img-btn btn-notification-o"></div></a>
+            </div>
+            </div>
+        
+        
+            <!--- CONTENIDO !-->
+		    <div data-role="content" class="secciones">	
+		    <ul id="articulos-favoritos"></ul>
+		    </div>
+ 
+	</div>
+    
+    
+    
+    <!------------    NOTIFICACIONES    !------------>
+	<div data-role="page" id="notificacion" class="page">
+	           
+        
+            <!--- HEADER !-->
+            <div data-role="header" class="none topbar">
+            <h1 id="titulo">Notificaciones</h1>
+            </div>
+		 
+            <!--- MENU NAVEGACION !-->
+            <div class="menu-nav">
+            <div class="btn-menu-nav">
+            <a href="#home" data-transition="slideup"><div class="img-btn btn-popular-o"></div></a>
+            </div>
+            <div class="btn-menu-nav">
+            <a href="#favorito" data-transition="slideup"><div class="img-btn btn-favorite-o"></div></a>
+            </div>
+            <a href="#notificacion" data-transition="slideup"><div class="btn-menu-nav">
+            <div class="img-btn btn-notification-a"></div></a>
+            </div>
+            </div>
+        
+        
+            <!--- CONTENIDO !-->
+		    <div data-role="content" class="secciones">	
+		    
+            <div id="opciones-notificaciones">  
+                    <div class="option-notificacion" id="accion">
+                    <div class="img-icon"><img src="img/notificaciones/accion.png" ></div>
+                    <h1>Acción</h1>
+                    </div>
+
+                    <div class="option-notificacion" id="estrategia">
+                    <div class="img-icon"><img src="img/notificaciones/estrategia.png"></div>
+                    <h1>Estrategia</h1>
+                    </div>       
+
+                    <div class="option-notificacion" id="aventura">
+                    <div class="img-icon"><img src="img/notificaciones/aventura.png" ></div>
+                    <h1>Aventura</h1>
+                    </div>                 
+
+                    <div class="option-notificacion" id="deporte">
+                    <div class="img-icon"><img src="img/notificaciones/deporte.png" ></div>
+                    <h1>Deporte</h1>
+                    </div>      
+
+                    <div class="option-notificacion" id="rpg">
+                    <div class="img-icon"><img src="img/notificaciones/rpg.png" ></div>
+                    <h1>RPG</h1>
+                    </div>    
+            </div> 
+		    </div>
+ 
+	</div>    
+    
+
+<script>
+
+    
+	$('#formulario').submit(function() {
+	// recolecta los valores que inserto el usuario
+	var datosUsuario = $("#nombredeusuario").val()
+	var datosPassword = $("#clave").val()
+
+
+	archivoValidacion = "http://localhost/loginapp2/validacionReal.php?jsoncallback=?" 
+	 
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword}) 
+	.done(function(respuestaServer) {
+
+
+		if(respuestaServer.validacion == "ok"){ 
+
+			$.mobile.changePage("#home"); // Redirige a esa page automaticamente va una vez
+
+			$("#home").on("pageshow", function(){ //al mostrarse esa pagina pasa algo.
+
+				//esta linea estaba comentada
+				$("#titulo").append("Bienvenido, "+ respuestaServer[0].idUsuario);
+                var elementos = Object.keys(respuestaServer).length;
+
+			});
+
+            
+            
+	}else{
+
+	    alert("no");
+	}
+	
+
+	})
+
+
+	return false;
+
+
+	})
+
+
+</script>
+
+    
+   
+    
+    
+
+
+<script type="text/javascript" src="getProjects.js"></script> 
+<script type="text/javascript" src="cordova.js"></script> 
+
+</body>
+</html>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
